@@ -1,0 +1,1 @@
+nest g module user => it creates user.module.ts in user folder
