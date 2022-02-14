@@ -1,4 +1,3 @@
-
 import { IsString, IsArray, IsOptional } from 'class-validator';
 
 export class CreateArticleDTO {
@@ -31,4 +30,15 @@ export class UpdateArticleDTO {
   @IsArray()
   @IsOptional()
   tagList: string[];
+}
+
+export interface FindFeedQuery {
+  limit?: number;
+  offset?: number;
+}
+
+export interface FindAllQuery extends FindFeedQuery {
+  tag?: string;
+  author?: string;
+  favorited?: string;
 }
